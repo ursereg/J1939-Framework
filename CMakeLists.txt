@@ -26,7 +26,7 @@ add_subdirectory(BinUtils)
 add_subdirectory(j1939AddressClaimer)
 add_subdirectory(Tests)
 
-find_package (LibWebSockets)
+find_package (Libwebsockets)
 find_package(Protobuf)
 
 if(LIBWEBSOCKETS_FOUND AND PROTOBUF_FOUND)

@@ -205,7 +205,7 @@ bool J1939DataBase::writeJsonFile(const std::string& file) {
 
 		jsonFrame[PGN_KEY] = frame->getPGN();
         jsonFrame[NAME_KEY] = frame->getName();
-        jsonFrame[LENGTH_KEY] = frame->getDataLength();
+        jsonFrame[LENGTH_KEY] = (int) frame->getDataLength();
 
 
 
@@ -225,7 +225,7 @@ bool J1939DataBase::writeJsonFile(const std::string& file) {
                 jsonSPN[TYPE_KEY] = 		spn->getType();
                 jsonSPN[NUMBER_KEY] = 		spn->getSpnNumber();
                 jsonSPN[NAME_KEY] = 		spn->getName();
-                jsonSPN[OFFSET_KEY] = 		spn->getOffset();
+                jsonSPN[OFFSET_KEY] = 		(int) spn->getOffset();
 
                 switch(spn->getType()) {
                 case SPN::SPN_NUMERIC:

@@ -32,7 +32,8 @@ add_library(J1939 SHARED
 
 target_include_directories(J1939
     PRIVATE 
-        include ${Common_SOURCE_DIR}/include
+        include ${Common_SOURCE_DIR}/include /usr/include/jsoncpp
+		
 )
 
 target_link_libraries(J1939

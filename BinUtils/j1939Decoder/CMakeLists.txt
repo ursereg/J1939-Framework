@@ -8,12 +8,13 @@ add_executable(j1939Decoder
 
 target_include_directories(j1939Decoder
     PUBLIC 
-        include ${J1939_SOURCE_DIR}/include ${Common_SOURCE_DIR}/include
+        include ${J1939_SOURCE_DIR}/include ${Common_SOURCE_DIR}/include /usr/include/jsoncpp
 )
 
 target_link_libraries(j1939Decoder
     PUBLIC
         J1939
+        ${JSONCPP_LIBRARIES}
 )
 
 install (TARGETS j1939Decoder
